@@ -15,26 +15,23 @@
     <body>
         <form method="post" action="servlet">
             <fieldset>
-                <legend>Inscription</legend>
-                <p>Vous pouvez vous inscrire via ce formulaire.</p>
+                <legend>Formulaire de recherche</legend>
+                <p>Vous pouvez rechercher des personnes via ce formulaire.</p>
 
-                <label for="email">Adresse email <span class="requis">*</span></label>
-                <input type="text" id="email" name="email" value="" size="20" maxlength="60" />
+                <label for="Nom">Nom </label>
+                <input type="text" id="Nom" name="Nom" value="" size="20" maxlength="60" />
                 <br />
 
-                <label for="motdepasse">Mot de passe <span class="requis">*</span></label>
-                <input type="password" id="motdepasse" name="motdepasse" value="" size="20" maxlength="20" />
+                <label for="Prenom">Prénom </label>
+                <input type="Prenom" id="Prenom" name="Prenom" value="" size="20" maxlength="60" />
                 <br />
 
-                <label for="confirmation">Confirmation du mot de passe <span class="requis">*</span></label>
-                <input type="password" id="confirmation" name="confirmation" value="" size="20" maxlength="20" />
+                <label for="tel">Numéro de téléphone </label>
+                <input type="tel" id="tel" name="tel" value="" size="20" maxlength="20" />
                 <br />
 
-                <label for="nom">Nom d'utilisateur</label>
-                <input type="text" id="nom" name="nom" value="" size="20" maxlength="20" />
-                <br />
 
-                <input type="submit" value="Inscription" class="sansLabel" />
+                <input type="submit" value="Ok" class="sansLabel" />
                 <br />
             </fieldset>
         </form>
