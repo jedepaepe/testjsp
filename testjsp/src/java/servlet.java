@@ -7,11 +7,15 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.LinkedList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.ListeTravailleur;
+import model.Travailleur;
+
 
 /**
  *
@@ -48,7 +52,26 @@ public class servlet extends HttpServlet {
         }
         
         System.out.println(nom +" " + prenom +" "+tel);
-    
+        LinkedList<Travailleur> ls = new LinkedList<>();
+        ls =ListeTravailleur.search(nom) ;
+        response.setContentType("text/html;charset=UTF-8");
+        request.setAttribute("ListeTravailleur", ls);
+
+        this.getServletContext().getRequestDispatcher("/WEB-INF/reponsejsp.jsp").forward(request, response);
+/*        
+        try (PrintWriter out = response.getWriter()) {
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet NewServlet</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet NewServlet at " + request.getContextPath() + "</h1>");
+            out.println(nom +" " + prenom +" "+tel);            
+            out.println("</body>");
+            out.println("</html>");
+        }
+  */  
     }
 
     private void validationNom(String nom) throws Exception {
