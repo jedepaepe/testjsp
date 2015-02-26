@@ -4,6 +4,8 @@
     Author     : localwsp
 --%>
 
+<%@page import="model.Travailleur"%>
+<%@page import="java.util.LinkedList"%>
 <%@page import="model.ListeTravailleur"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,8 +16,8 @@
     </head>
     <body>
         <h1><% 
-            ListeTravailleur lt = (ListeTravailleur) request.getAttribute("ListeTravailleur");
-            out.println(lt.getAll()); 
+            LinkedList<Travailleur>  lt = (LinkedList<Travailleur>) request.getAttribute("ListeTravailleur");
+            out.println(lt.toString()); 
         %></h1>
     </body>
 </html>

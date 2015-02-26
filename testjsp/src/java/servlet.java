@@ -53,7 +53,7 @@ public class servlet extends HttpServlet {
         
         System.out.println(nom +" " + prenom +" "+tel);
         LinkedList<Travailleur> ls = new LinkedList<>();
-        ls =ListeTravailleur.search(nom) ;
+        ls = ListeTravailleur.search(nom) ;
         response.setContentType("text/html;charset=UTF-8");
         request.setAttribute("ListeTravailleur", ls);
 
