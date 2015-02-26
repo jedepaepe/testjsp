@@ -17,7 +17,13 @@
     <body>
         <h1><% 
             LinkedList<Travailleur>  lt = (LinkedList<Travailleur>) request.getAttribute("ListeTravailleur");
-            out.println(lt.toString()); 
+            for(Travailleur untravailleur : lt )  {
+               out.println("Nom du travailleur " + untravailleur.getNom() + "<br/>");
+               out.println("Prénom du travailleur " + untravailleur.getPrenom() + "<br/>");
+               out.println("Numéro de téléphone du travailleur " + untravailleur.getTel() + "<br/>");
+               
+            }        
+        
         %></h1>
     </body>
 </html>
